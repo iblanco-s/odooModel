@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="categoria_modulo_libreria" model="ir.module.category">
+        <field name="name">Acceso a  libreria</field>
+    </record>
+    <record id="inventario_group_librero" model="res.groups">
+        <field name="name">librero</field>
+        <field name="category_id" ref="categoria_modulo_libreria"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+    </record>
+    <record id="inventario_group_invitado" model="res.groups">
+        <field name="name">Invitado</field>
+        <field name="category_id" ref="categoria_modulo_libreria"/>
+        <field name="implied_ids" eval="[(4, ref('base.group_user'))]" />
+    </record>
+</odoo>

@@ -5,6 +5,7 @@ class Trip(models.Model):
     _description = 'Trip Entity'
 
     id = fields.Integer(string='ID')
-    trip_type = fields.Many2one('trandom.trip_type', string='Trip Type')
-    trip_info_ids = fields.One2many('trandom.trip_info', 'trip_info_id', string='Trip Info')
+    trip_type = fields.Selection([('culture', 'Culture'), ('leisure', 'Leisure'), ('nature', 'Nature'),('sports','Sports')], string="Type")
     description = fields.Char(string='Description')
+    trip_info = fields.One2many('trandom.trip_info', 'trip_id', string='Trip Info')
+    cities = fields.Many2many('trandom.city', string='City')
