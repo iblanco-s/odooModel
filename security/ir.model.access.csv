@@ -1,3 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_libro_librero,Acesso a libros,model_libreria_libros,inventario_group_librero,1,1,1,1
-access_libro_iinvitado,Acesso a los libros prof,model_libreria_libros,inventario_group_librero,1,,,
+access_libro_admin,Acesso a Trandom desde admin,model_trandom_trip,inventario_group_admin,1,1,1,1
+access_libro_usuario,Acesso a Trandom desde usario,model_trandom_trip,inventario_group_usuario,1,,,
