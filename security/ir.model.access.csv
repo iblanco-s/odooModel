@@ -1,3 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_libro_admin,Acesso a Trandom desde admin,model_trandom_trip,inventario_group_admin,1,1,1,1
 access_libro_usuario,Acesso a Trandom desde usario,model_trandom_trip,inventario_group_usuario,1,,,
+access_libro_admin2,Acesso a Trandom desde admin,model_trandom_trip_info,inventario_group_admin,1,1,1,1
+access_libro_usuario2,Acesso a Trandom desde usario,model_trandom_trip_info,inventario_group_usuario,1,,,
+access_libro_admin3,Acesso a Trandom desde admin,model_trandom_trip_info_id,inventario_group_admin,1,1,1,1
+access_libro_usuario3,Acesso a Trandom desde usario,model_trandom_trip_info_id,inventario_group_usuario,1,,,

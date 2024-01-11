@@ -9,17 +9,8 @@
                         <field name="id" readonly="1"/>
                         <field name="trip_type"/>
                         <field name="description"/>
-                    </group>
-                    <group>
                         <field name="trip_info">
-                            <tree>
-                                <!-- Define the fields to display in the One2many list view here -->
-                            </tree>
-                            <form>
-                                <!-- Define the fields to display in the One2many form view here -->
-                            </form>
                         </field>
-                        <field name="cities" widget="many2many_tags"/>
                     </group>
                 </sheet>
             </form>
@@ -38,14 +29,4 @@
         </field>
     </record>
 
-    <record id="action_trip" model="ir.actions.act_window">
-        <field name="name">Trips</field>
-        <field name="res_model">trandom.trip</field>
-        <field name="view_type">form</field>
-        <field name="view_mode">tree,form</field>
-        <field name="view_id" ref="view_trip_tree"/>
-    </record>
-
-    <menuitem id="menu_trip_main" name="Trips"/>
-    <menuitem id="menu_trip" parent="menu_trip_main" action="action_trip"/>
 </odoo>

@@ -10,6 +10,7 @@
         'security/libreria_security.xml',
         'security/ir.model.access.csv',
         'views/menu_view.xml',
+        'views/trip_view.xml',
     ],
     'installable': True,
     'license': 'LGPL-3',
