@@ -2,10 +2,14 @@
 from odoo import models, fields
 
 class Customer(models.Model):
-    _inherit = 'res.users'
-    #_name = 'trandom.customer'
+    _inherit = 'trandom.user'
+    _name = 'trandom.customer'
     _description = 'Customer'
 
-    trip_infos = fields.One2many('trandom.trip_info', 'customer_id',  String='Trip Infos')
+    name = fields.Char(string='Name')
+    surname = fields.Char(string='Surname')
+    mail = fields.Char(string='Mail')
+    trips = fields.Many2many('trandom.trip', string='Trip')
+
 
 

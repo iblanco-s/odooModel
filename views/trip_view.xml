@@ -6,11 +6,11 @@
             <form string="Trip">
                 <sheet>
                     <group>
-                        <field name="id" readonly="1"/>
+                        <field name="id"/>
                         <field name="trip_type"/>
                         <field name="description"/>
-                        <field name="trip_info">
-                        </field>
+                        <field name="customer"/>
+                        <field name="excursions"/>
                     </group>
                 </sheet>
             </form>
@@ -28,5 +28,4 @@
             </tree>
         </field>
     </record>
-
 </odoo>
