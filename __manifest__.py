@@ -15,4 +15,6 @@
     ],
     'installable': True,
     'license': 'LGPL-3',
+    'icon': '/Trandom/static/description/odoo_icon.png',
+
 }
