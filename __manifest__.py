@@ -12,6 +12,9 @@
         'views/menu_view.xml',
         'views/trip_view.xml',
     ],
+    'depends':['project'],
     'installable': True,
     'license': 'LGPL-3',
+    'icon': '/Trandom/static/description/odoo_icon.png',
+
 }
