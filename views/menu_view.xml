@@ -1,11 +1,19 @@
 <?xml version="1.0" ?>
 <odoo>
-    <record id="trandom_action" model="ir.actions.act_window">
+    <record id="trip_action" model="ir.actions.act_window">
         <field name="name">Trip</field>
         <field name="res_model">trandom.trip</field>
         <field name="view_mode">kanban,tree,form</field>
     </record>
+    <record id="customer_action" model="ir.actions.act_window">
+        <field name="name">Customer</field>
+        <field name="res_model">trandom.customer</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
     <menuitem name="Trandom" id="trandom_menu"></menuitem>
     <menuitem name="Trip" id="trip_menu" parent="trandom_menu"
-              action="trandom_action"></menuitem>
+              action="trip_action"></menuitem>
+    <menuitem name="Customer" id="customer_menu" parent="trandom_menu"
+              action="customer_action"></menuitem>
 </odoo>
