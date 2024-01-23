@@ -25,3 +25,18 @@ class Trip(models.Model):
         for record in self:
             if not record.trip_type:
                 raise ValidationError("El tipo de viaje es obligatorio y no puede ser nulo o vacío")
+
+    @api.onchange('trip_type')
+    def _onchange_trip_type(self):
+        if self.trip_type == 'culture':
+            self.description = 'Cultural trip to famous cities (example)'
+        elif self.trip_type == 'leisure':
+            self.description = 'Leisure trip to relaxing destinations (example)'
+        elif self.trip_type == 'nature':
+            self.description = 'Nature trip to beautiful landscapes (example)'
+        elif self.trip_type == 'sports':
+            self.description = 'Sports trip to exciting games (example)'
+    @api.model
+    def create(self, vals):
+        vals['description'] = vals.get('description', '').upper()
+        return super(Trip, self).create(vals)
