@@ -12,7 +12,10 @@
         'views/menu_view.xml',
         'views/trip_view.xml',
         'views/excursions_view.xml',
+        'views/customer_view.xml'
     ],
     'installable': True,
     'license': 'LGPL-3',
+    'icon': '/Trandom/static/description/odoo_icon.png',
+
 }
