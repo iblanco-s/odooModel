@@ -31,22 +31,16 @@ class Customer(models.Model):
             if not record.surname:
                 raise ValidationError("The Name can't be empty")
 
-    @api.constrains('name', 'surname')
-    def _check_name_and_surname_no_numbers(self):
+    @api.onchange('name', 'surname')
+    def _onchange_name_and_surname_no_numbers(self):
         for record in self:
-            if any(char.isdigit() for char in record.name):
-                raise ValidationError("The name can't have numbers on it")
+            if record.name:
+                if any(char.isdigit() for char in record.name):
+                    raise ValidationError("The name can't have numbers on it")
+            if record.surname:
+                if any(char.isdigit() for char in record.surname):
+                    raise ValidationError("The surname can't have numbers on it")
 
-            if any(char.isdigit() for char in record.surname):
-                raise ValidationError("The surname can't have numbers on it")
-
-    @api.onchange('name')
-    def _onchange_name(self):
-        self.surname = ''
-
-    @api.onchange('surname')
-    def _onchange_surname(self):
-        self.name = ''
 
     @api.model
     def create(self, vals):
