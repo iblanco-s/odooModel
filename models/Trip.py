@@ -38,5 +38,6 @@ class Trip(models.Model):
             self.description = 'Sports trip to exciting games (example)'
     @api.model
     def create(self, vals):
-        vals['description'] = vals.get('description', '').upper()
+        if not isinstance(vals.get('description'), bool):
+            vals['description'] = vals.get('description', '').upper()
         return super(Trip, self).create(vals)

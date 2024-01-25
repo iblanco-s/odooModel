@@ -40,19 +40,19 @@ class Customer(models.Model):
             if any(char.isdigit() for char in record.surname):
                 raise ValidationError("The surname can't have numbers on it")
 
-            @api.onchange('name')
-            def _onchange_name(self):
-                self.surname = ''
+    @api.onchange('name')
+    def _onchange_name(self):
+        self.surname = ''
 
-            @api.onchange('surname')
-            def _onchange_surname(self):
-                self.name = ''
+    @api.onchange('surname')
+    def _onchange_surname(self):
+        self.name = ''
 
-@api.model
-def create(self, vals):
-    if 'name' in vals and vals['name']:
-        vals['name'] = vals['name'].capitalize()
-    if 'surname' in vals and vals['surname']:
-        vals['surname'] = vals['surname'].capitalize()
+    @api.model
+    def create(self, vals):
+        if 'name' in vals and vals['name']:
+            vals['name'] = vals['name'].capitalize()
+        if 'surname' in vals and vals['surname']:
+            vals['surname'] = vals['surname'].capitalize()
 
-    return super(Customer, self).create(vals)
+        return super(Customer, self).create(vals)
