@@ -1,4 +1,4 @@
 from . import Trip
-from . import TripInfo
+from . import User
 from . import Customer
-from . import City
+from . import Excursions
