@@ -7,6 +7,7 @@
                 <sheet>
                     <group>
                         <field name="id"/>
+                        <field name="name"/>
                         <field name="trip_type"/>
                         <field name="description"/>
                         <field name="customer"/>
@@ -45,9 +46,8 @@
                             </div>
                             <div class="oe_kanban_details">
                                 <strong class="o_kanban_record_title">
-                                    <span>id: </span>
-                                    <field name="id"/>
-                                    <span>, Description: </span>
+                                    <field name="name"/>
+                                    <span>: </span>
                                     <field name="description"/>
                                 </strong>
                             </div>
