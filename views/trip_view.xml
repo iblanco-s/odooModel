@@ -6,6 +6,9 @@
             <form string="Trip">
                 <sheet>
                     <group>
+                        <separator string="Content Data" colspan="2"/>
+                        <field name="image" widget="image" class="oe_avatar" nolabel="1"/>
+                        <separator string="Trip Data" colspan="2"/>
                         <field name="id"/>
                         <field name="name"/>
                         <field name="trip_type"/>
@@ -42,7 +45,7 @@
                     <t t-name="kanban-box">
                         <div t-attf-class="oe_kanban_global_click">
                             <div class="o_kanban_image">
-                                <img t-att-src="'https://content.skyscnr.com/m/5ef9ee6d084a5dd7/original/GettyImages-457926043_doc.jpg'" alt="imagen avión"/>
+                                <img t-att-src="kanban_image('trandom.trip','image',record.id.raw_value)" alt="imagen viaje"/>
                             </div>
                             <div class="oe_kanban_details">
                                 <strong class="o_kanban_record_title">

@@ -10,6 +10,7 @@ class Trip(models.Model):
     name = fields.Char(string='Name')
     trip_type = fields.Selection([('culture', 'Culture'), ('leisure', 'Leisure'), ('nature', 'Nature'),('sports','Sports')], string="Type")
     description = fields.Char(string='Description')
+    image = fields.Binary(string='Image with URL')
     customer = fields.Many2many('trandom.customer', string='Customer')
     excursions = fields.One2many('trandom.excursions', 'id', string='Excursions')
 
